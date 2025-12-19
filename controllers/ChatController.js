@@ -1,7 +1,7 @@
 'use strict';
 
 const response = require('../utils/response');
-const { sendOllamaChat } = require('../utils/ollama');
+const { sendMessages } = require('../utils/ollama');
 const { buildCharacterNarrative } = require('../utils/chat');
 const CharacterService = require('../services/CharacterService');
 
@@ -41,7 +41,7 @@ exports.chat = async (req, res) => {
     ];
 
     try {
-        const reply = await sendOllamaChat(messages);
+        const reply = await sendMessages(messages);
 
         response.success(res, {
             character: characterName || null,
