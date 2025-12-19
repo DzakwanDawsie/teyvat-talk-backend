@@ -20,7 +20,7 @@ exports.index = async (req, res) => {
     if (query.region) filters.region = query.region;
     if (query.quality) filters.quality = query.quality;
 
-    const characters = CharacterService.getAll(filters).map(filterCharacterKeys);
+    const characters = CharacterService.getAll(filters);
 
     response.success(res, {
         count: characters.length,
@@ -43,10 +43,7 @@ exports.show = async (req, res) => {
 exports.random = async (req, res) => {
     const count = parseInt(req.query.count) || 1;
 
-    const rawCharacters = CharacterService.getRandom(count);
-    const characters = Array.isArray(rawCharacters)
-        ? rawCharacters.map(filterCharacterKeys)
-        : filterCharacterKeys(rawCharacters);
+    const characters = CharacterService.getRandom(count);
 
     response.success(res, {
         count: Array.isArray(characters) ? characters.length : 1,
@@ -61,7 +58,7 @@ exports.search = async (req, res) => {
         return response.failed(res, 'Keyword is required');
     }
 
-    const characters = CharacterService.search(keyword).map(filterCharacterKeys);
+    const characters = CharacterService.search(keyword);
 
     response.success(res, {
         count: characters.length,
