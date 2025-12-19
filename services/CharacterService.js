@@ -8,7 +8,7 @@ let characters = null;
 const loadCharacters = () => {
     if (characters) return characters;
 
-    const filePath = path.join(__basedir, 'assets', 'characters.json');
+    const filePath = path.join(__basedir, 'assets', 'characters-v2.json');
     const data = fs.readFileSync(filePath, 'utf8');
     characters = JSON.parse(data);
 
