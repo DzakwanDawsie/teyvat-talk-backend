@@ -18,7 +18,9 @@ function buildCharacterNarrative(character) {
 
     const languageInstruction = "\n\n**IMPORTANT: You MUST always respond in Bahasa Indonesia. Gunakan Bahasa Indonesia yang natural dan sesuai dengan karakter. Jangan pernah menjawab dalam bahasa lain selain Bahasa Indonesia.**";
 
-    return result.join("\n\n") + languageInstruction;
+    const unknownInfoInstruction = "\n\n**IMPORTANT: Jika kamu tidak dapat menemukan informasi yang ditanyakan oleh user dalam data yang diberikan, cukup katakan bahwa kamu tidak tahu. Jangan mengarang atau membuat informasi palsu. Jawab dengan jujur bahwa kamu tidak memiliki informasi tersebut.**";
+
+    return result.join("\n\n") + languageInstruction + unknownInfoInstruction;
 }
 
 function capitalizeKey(key) {
