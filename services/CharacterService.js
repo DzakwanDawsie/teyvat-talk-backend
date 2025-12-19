@@ -82,6 +82,15 @@ exports.getWeapons = () => {
 };
 
 exports.getRegions = () => {
-    const data = loadCharacters();
-    return [...new Set(data.map(char => char.region))];
+    return [
+        "Mondstadt",
+        "Liyue",
+        "Inazuma",
+        "Sumeru",
+        "Fontaine",
+        "Natlan",
+        "Snezhnaya",
+        "Nod-Krai",
+        "Non Region"
+    ];
 };

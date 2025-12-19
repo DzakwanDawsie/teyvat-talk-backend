@@ -65,7 +65,7 @@
         "quality": "5 Stars",
         "element": "Cryo",
         "weapon": "Bow",
-        "region": "None",
+        "region": "Non Region",
         "model": "Medium Female",
         "personality": "An agile hunter from the Nora tribe. With bow in hand, she's always ready to protect the innocent.",
         "appearance": "Aloy uses the medium female model. She has pale, freckled skin; light green-brown eyes; and long, light auburn-brown hair, some of which is tied into braids.\n",
@@ -1860,7 +1860,7 @@
     {
         "name": "Traveler",
         "quality": "5 Stars",
-        "element": "None",
+        "element": "Non Region",
         "weapon": "Sword",
         "region": "None",
         "model": "Aether: Medium MaleLumine: Medium Female",
